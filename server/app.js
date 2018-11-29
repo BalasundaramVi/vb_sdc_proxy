@@ -61,16 +61,16 @@ app.get('/:productSku/similar', (req, res) => {
 // //     .catch(err => res.status(500).end(err.message));
 // // });
 
-// // app.get('/:productSku/colors', (req, res) => {
-// //   axios.get(`http://ec2-18-232-96-48.compute-1.amazonaws.com:3006/${ req.params.productSku }/colors`)
-// //     .then(resp => res.status(200).send(resp.data))
-// //     .catch(err => res.status(500).end(err.message));
-// // });
+app.get('/:productSku/colors', (req, res) => {
+  axios.get(`http://ec2-54-83-182-45.compute-1.amazonaws.com:3000/${ req.params.productSku }/colors`)
+    .then(resp => res.status(200).send(resp.data))
+    .catch(err => res.status(500).end(err.message));
+});
 
-// // app.get('/:productSku/colors/:style', (req, res) => {
-// //   axios.get(`http://ec2-18-232-96-48.compute-1.amazonaws.com:3006/${ req.params.productSku }/colors/${ req.params.style }`)
-// //     .then(resp => res.status(200).send(resp.data))
-// //     .catch(err => res.status(500).end(err.message));
-// // });
+app.get('/:productSku/colors/:style', (req, res) => {
+  axios.get(`http://ec2-54-83-182-45.compute-1.amazonaws.com:3000/${ req.params.productSku }/colors/${ req.params.style }`)
+    .then(resp => res.status(200).send(resp.data))
+    .catch(err => res.status(500).end(err.message));
+});
 
 module.exports = app;

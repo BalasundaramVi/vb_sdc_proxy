@@ -73,3 +73,12 @@
   margin-right: 30px;
 }
 
+#colors-container .shoe_color_option:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+#colors-container img:hover {
+  background-color: black;
+  opacity: 0.9;
+}
