@@ -6,6 +6,5 @@
 node_modules/
 package-lock.json
 
-
-
-
+## NEW RELIC KEY
+/new_relic/LICENSE_KEY.js
