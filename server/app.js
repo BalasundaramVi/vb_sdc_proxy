@@ -49,11 +49,11 @@ app.get('/:productSku/similar', (req, res) => {
 // //     .catch(err => res.status(500).end(err.message));
 // // });
 
-// // app.get('/:productSku/reviews', (req, res) => {
-// //   axios.get(`http://ec2-3-16-150-245.us-east-2.compute.amazonaws.com:3004/${ req.params.productSku }/reviews`)
-// //     .then(resp => res.status(200).send(resp.data))
-// //     .catch(err => res.status(500).end(err.message));
-// // });
+app.get('/:productSku/reviews', (req, res) => {
+  axios.get(`http://ec2-54-241-129-105.us-west-1.compute.amazonaws.com:3004/${ req.params.productSku }/reviews`)
+    .then(resp => res.status(200).send(resp.data))
+    .catch(err => res.status(500).end(err.message));
+});
 
 app.get('/:productSku/images', (req, res) => {
   axios.get(`http://ec2-54-219-162-194.us-west-1.compute.amazonaws.com:3005/${ req.params.productSku }/images`)
