@@ -55,11 +55,11 @@ app.get('/:productSku/similar', (req, res) => {
 // //     .catch(err => res.status(500).end(err.message));
 // // });
 
-// // app.get('/:productSku/images', (req, res) => {
-// //   axios.get(`http://ec2-54-174-152-69.compute-1.amazonaws.com:3005/${ req.params.productSku }/images`)
-// //     .then(resp => res.status(200).send(resp.data))
-// //     .catch(err => res.status(500).end(err.message));
-// // });
+app.get('/:productSku/images', (req, res) => {
+  axios.get(`http://ec2-54-219-162-194.us-west-1.compute.amazonaws.com:3005/${ req.params.productSku }/images`)
+    .then(resp => res.status(200).send(resp.data))
+    .catch(err => res.status(500).end(err.message));
+});
 
 app.get('/:productSku/colors', (req, res) => {
   axios.get(`http://ec2-54-83-182-45.compute-1.amazonaws.com:3000/${ req.params.productSku }/colors`)
